@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!- topicon -!>
+        <link rel="icon" type="image/png" href="../images/logotop.jpeg">
+
+        <!--Google Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    	<link rel="stylesheet" href="/stylesheets/style.css">	
+
+        <!-- icon -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+        <title>Codechef CGC</title>
+      
+        <style>
+            #corepic {
+                display: none;
+            }
+            #vision {
+                display: none;
+            }
+            @media only screen and (max-width: 766px) {
+                #corepic {
+                    display: block;
+                    margin-top: -93px;
+                }
+                #corepic2 {
+                    display: none;
+                }
+                #vision {
+                    display: block;
+                }
+                #vision2 {
+                    display: none;
+                }
+                #cardimg1 {
+                    display: none;
+                }
+                #lurs {
+                    margin-top: 40px;
+                }
+                .mobileimg {
+                    display: block !important;
+                    height: 400px;
+                    margin-top: 90px;
+                }
+                .pcimg {
+                    display: none;
+                }
+                #teamh1 {
+                    font-size: 30px;
+                }
+                
+                #teamlead {
+                    font-size: 16px;
+                }
+            }
+            .mobileimg{
+                display: none;
+            }
+            
+            #teami:hover{
+            transform: scale(1.2,1.2);
+            box-shadow: 0px 2px 5px #888888;
+            } 
+            
+            #upcoming2 {
+                display: none;
+            }
+            
+            #event2, #event3 {
+                display: none;
+            } 
+            
+        </style>   
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+      
+      
+    <!--navbar-->
+      
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark mobilebg desktopbg" style="background-image: linear-gradient(to right, rgb(128, 0, 0), #000066, #0066CC); box-shadow: 5px 10px 18px black;">
+        <a class="navbar-brand" href="/"><img src="../images/logo@4x.png"  width="40px" height="40px" class="d-inline-block align-top" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <% if(!currentUser){ %>
+            <ul class="navbar-nav nav-pills mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/" style="color: white;"><i class="fas fa-home"></i>  Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/team" style="color: white;"><i class="fas fa-users"></i>  Our Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/upcoming_events" style="color: white;"><i class="far fa-calendar-alt"></i>  Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/ourblogs" style="color: white;"><i class="fas fa-pen-square"></i>  Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact" style="color: white;"><i class='fas fa-envelope' style='font-size:16px'></i> Contact us</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav justify-content-end nav-pills">
+                <!--
+                <li class="nav-item">
+                    <a class="nav-link" href="/register" style="color: #fff;"><i class='fas fa-user' style='font-size:16px'></i> Register</a>
+                </li>
+                -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/login" style="color: #fff;"><i class="fas fa-user-cog" style='font-size:16px'></i> Adminisration</a>
+                </li>
+            </ul>
+            <% } else { %>
+                <ul class="navbar-nav nav-pills mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/" style="color: white;"><i class="fas fa-home"></i>  Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/team" style="color: white;"><i class="fas fa-users"></i>  Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/upcoming_events" style="color: white;"><i class="far fa-calendar-alt"></i>  Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ourblogs" style="color: white;"><i class="fas fa-pen-square"></i>  Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact" style="color: white;"><i class='fas fa-envelope' style='font-size:16px'></i> Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blogs/new" style="color: white;"><i class="fas fa-pen-fancy"></i> Add Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/update" style="color: white;"><i class="fas fa-edit"></i>  Update Page</a>
+                    </li>
+                </ul>   
+                <ul class="navbar-nav justify-content-end nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout" style="color: #fff;"><i class='fas fa-sign-out-alt' style='font-size:16px'></i> Logout</a>
+                    </li>
+                </ul>
+            <% } %>
+        </div>
+    </nav>
+    <div class="container-fluid message" style="padding-top: 80px;">
+        <% if(error && error.length > 0){ %>
+            <div class="alert" role="alert" style="background-color: rgb(247, 65, 65);">
+                <%=error%>
+            </div>	
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert" role="alert" style="background-color: rgb(66, 250, 66);">
+                <%=success%>
+            </div>
+        <% } %>
+    </div>
+  
